@@ -11,10 +11,9 @@ import {
 import { fastFoodOutline } from 'ionicons/icons';
 import React, { useState } from 'react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import './Home.scss';
 
 const Home: React.FC = () => {
-
   const [showToast, setShowToast] = useState(false);
   const handleClick = () => {
     setShowToast(true);
@@ -22,18 +21,21 @@ const Home: React.FC = () => {
   };
 
   return (
-    <IonPage>
+    <IonPage className="page-container">
       <IonHeader>
         <IonToolbar>
           <IonTitle>PlateTrader</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding">
+      <IonContent className="background">
+
+      <IonContent className="ion-padding main">
         <IonButton onClick={handleClick}>
           <IonIcon icon={fastFoodOutline} slot="start"/>
           Sign Up
         </IonButton>
         <IonToast isOpen={showToast} message="popping up!"></IonToast>
+      </IonContent>
       </IonContent>
     </IonPage>
   );

@@ -1,0 +1,43 @@
+/* .page-container {
+    background-image: url("https://coreyhodge.net/assets/corey.png");
+  } */
+
+/* ion-content.background{
+    --background: url(/assets/logo/logo_1000.png) 0 0/100% 100% no-repeat;
+} */
+
+ion-content {
+    --ion-background-color: transparent;
+}
+
+ion-content.background {
+    position: relative;
+    overflow: hidden;
+}
+
+ion-content.background:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+    background-image: url(/assets/man-standing-near-food-truck.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    @media (min-width: 600px) {
+        width: 50%;
+    }
+}
+
+ion-content.main{
+    z-index: 2;
+}
