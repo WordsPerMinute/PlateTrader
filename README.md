@@ -1,5 +1,8 @@
 # PlateTrader
 
+## App home page screenshot (including mockup art of sample interaction)
+![](PlateTrader_preview.png)
+
 ## Overview
 PlateTrader is an independent project so that I can learn more about mobile development, with the goal of eventually publishing it to the App Store and Google Play Store.
 For now, it's remaning a public repo.
@@ -22,6 +25,3 @@ The concept has a couple inspirations:
 
 ## Contibutor's Guide
 No way to contribute directly as of now. If you'd like to get in touch, you can reach me via my website, http://coreyhodge.net
-
-## App home page screenshot (including mockup art of sample interaction)
-![](PlateTrader_preview.png)
