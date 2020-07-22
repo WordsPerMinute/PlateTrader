@@ -9,6 +9,9 @@ import {
   IonToast, 
   IonFooter,
   IonText,
+  IonCol,
+  IonGrid,
+  IonRow,
 } from '@ionic/react';
 import { fastFoodOutline } from 'ionicons/icons';
 import React, { useState } from 'react';
@@ -25,33 +28,54 @@ const Home: React.FC = () => {
   return (
     <IonPage className="page-container">
       <IonHeader>
-        <IonToolbar className="test">
+        {/* <IonToolbar className="test">
           <div className="title-container">
             <img src="/assets/logo/logo_100.png" alt="PlaterTrader logo"/>
             <h1>PlateTrader</h1>
           </div>
-        </IonToolbar>
+        </IonToolbar> */}
       </IonHeader>
       <IonContent className="background">
-        <IonContent className="ion-padding main">
-          <IonText color="light">
-            <h1>Welcome to PlateTrader</h1>
-          </IonText>
-          <IonText color="light">
-            <p>PlateTrader...</p>
-          </IonText>
-          <IonButton onClick={handleClick}>
-            <IonIcon icon={fastFoodOutline} slot="start"/>
-            Sign Up
-          </IonButton>
-          <IonToast isOpen={showToast} message="popping up!"></IonToast>
+        <IonContent className="main">
+          <IonGrid>
+            <IonRow>
+              <IonCol className="subtitle-container">
+                <IonText color="light" className="ion-text-center logo-subtitle-container">
+                  <img src="/assets/logo/logo_100.png" alt="PlaterTrader logo"/> 
+                  <h2>PlateTrader</h2>
+                </IonText>
+                <div className="break"></div>
+                <IonText color="light">
+                  <p>The app for Food and Restaurant workers to trade their shift meals with people working at other establishments</p>
+                </IonText>
+              </IonCol>
+            </IonRow>
+            <IonRow>
+              <IonCol className="demo-container">
+                <img src="/assets/PlateTrader_in_action.png" className="demo-photo" alt=""/>
+              </IonCol>
+            </IonRow>
+            <IonRow>
+              <IonCol className="buttons-container ion-justify-content-center">
+                <IonButton onClick={handleClick}>
+                  <IonIcon icon={fastFoodOutline} slot="start"/>
+                  Sign Up
+                </IonButton>
+                <IonButton onClick={handleClick}>
+                  <IonIcon icon={fastFoodOutline} slot="start"/>
+                  Sign In
+                </IonButton>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        <IonToast isOpen={showToast} message="Coming soon!"></IonToast>
         </IonContent>
       </IonContent>
-      <IonFooter>
+      {/* <IonFooter>
         <IonToolbar>
           <IonTitle>Footer</IonTitle>
         </IonToolbar>
-      </IonFooter>
+      </IonFooter> */}
     </IonPage>
   );
 };
