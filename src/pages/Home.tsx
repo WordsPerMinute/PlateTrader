@@ -6,7 +6,9 @@ import {
   IonToolbar, 
   IonButton, 
   IonIcon, 
-  IonToast 
+  IonToast, 
+  IonFooter,
+  IonText,
 } from '@ionic/react';
 import { fastFoodOutline } from 'ionicons/icons';
 import React, { useState } from 'react';
@@ -23,20 +25,33 @@ const Home: React.FC = () => {
   return (
     <IonPage className="page-container">
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>PlateTrader</IonTitle>
+        <IonToolbar className="test">
+          <div className="title-container">
+            <img src="/assets/logo/logo_100.png" alt="PlaterTrader logo"/>
+            <h1>PlateTrader</h1>
+          </div>
         </IonToolbar>
       </IonHeader>
       <IonContent className="background">
-
-      <IonContent className="ion-padding main">
-        <IonButton onClick={handleClick}>
-          <IonIcon icon={fastFoodOutline} slot="start"/>
-          Sign Up
-        </IonButton>
-        <IonToast isOpen={showToast} message="popping up!"></IonToast>
+        <IonContent className="ion-padding main">
+          <IonText color="light">
+            <h1>Welcome to PlateTrader</h1>
+          </IonText>
+          <IonText color="light">
+            <p>PlateTrader...</p>
+          </IonText>
+          <IonButton onClick={handleClick}>
+            <IonIcon icon={fastFoodOutline} slot="start"/>
+            Sign Up
+          </IonButton>
+          <IonToast isOpen={showToast} message="popping up!"></IonToast>
+        </IonContent>
       </IonContent>
-      </IonContent>
+      <IonFooter>
+        <IonToolbar>
+          <IonTitle>Footer</IonTitle>
+        </IonToolbar>
+      </IonFooter>
     </IonPage>
   );
 };

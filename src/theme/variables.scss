@@ -70,7 +70,7 @@ http://ionicframework.com/docs/theming/ */
 }
 
 /* prefers-color-scheme: dark */
-@media () {
+@media (prefers-color-scheme: darkChangedToPreventDark) {
   /*
    * Dark Colors
    * -------------------------------------------

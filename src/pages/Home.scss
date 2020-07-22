@@ -38,6 +38,19 @@ ion-content.background:before {
     }
 }
 
+// allows the page to float above the background for interaction
 ion-content.main{
     z-index: 2;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    img {
+        margin: 0 5px 0 10px;
+        width: 25px;
+    }
+    h1 {
+        margin-top: 10px;
+    }
 }
