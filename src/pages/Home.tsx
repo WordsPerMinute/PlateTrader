@@ -13,7 +13,7 @@ import {
   IonGrid,
   IonRow,
 } from '@ionic/react';
-import { fastFoodOutline } from 'ionicons/icons';
+import { fastFoodOutline, restaurantOutline, pizzaOutline } from 'ionicons/icons';
 import React, { useState } from 'react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.scss';
@@ -46,7 +46,7 @@ const Home: React.FC = () => {
                 </IonText>
                 <div className="break"></div>
                 <IonText color="light">
-                  <p>The app for Food and Restaurant workers to trade their shift meals with people working at other establishments</p>
+                  <p>The app for restaurant workers and owners to trade meals with people working at other establishments</p>
                 </IonText>
               </IonCol>
             </IonRow>
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
             <IonRow>
               <IonCol className="buttons-container ion-justify-content-center">
                 <IonButton onClick={handleClick}>
-                  <IonIcon icon={fastFoodOutline} slot="start"/>
+                  <IonIcon icon={restaurantOutline} slot="start"/>
                   Sign Up
                 </IonButton>
                 <IonButton onClick={handleClick}>
